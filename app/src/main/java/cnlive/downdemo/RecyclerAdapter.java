@@ -18,20 +18,13 @@ import java.util.List;
 import cnlive.downdemo.entity.FileInfo;
 import cnlive.downdemo.services.DownloadService;
 
-
-/**
- * author: malong on 2016/8/29
- * email: malong_ilp@163.com
- * address: Xidian University
- */
-
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder>{
 
     private Context mContext;
     private List<FileInfo> mFileList;
     private LayoutInflater mInflater;
     private Messenger mMessenger;
-    private final String TAG="busysnail";
+    private final String TAG="RecyclerAdapter";
 
     public RecyclerAdapter(Context context, List<FileInfo> fileInfos)
     {
@@ -60,9 +53,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
 
-
         final FileInfo fileInfo=mFileList.get(position);
-
 
             int pro= (int) fileInfo.getFinished();
             holder.mTvFileName.setText(fileInfo.getFilename());
@@ -119,7 +110,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         ProgressBar mPbProgress;
         Button mBtnStart;
         Button mBtnStop;
-
 
         public ViewHolder(View itemView) {
             super(itemView);
